@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <form action="/shorten" method="post">
+        <label for="long_url">Enter URL:</label>
+        <input type="text" id="long_url" name="long_url" required>
+        <br>
+        <label for="expiration_days">Expiration Days (optional):</label>
+        <input type="number" id="expiration_days" name="expiration_days" min="0">
+        <br>
+        <input type="submit" value="Shorten">
+    </form>
+    <!-- Add Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
