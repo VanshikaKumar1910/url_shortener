@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shortened URL</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background: linear-gradient(to right, #667eea, #764ba2);
             margin: 0;
             padding: 0;
             display: flex;
@@ -15,21 +17,29 @@
         }
         .container {
             text-align: center;
-            background-color: #fff;
+            background: rgba(255, 255, 255, 0.85);
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+            max-width: 400px;
+            width: 100%;
         }
         h1 {
             color: #333;
+            margin-bottom: 20px;
         }
         p {
             color: #666;
             line-height: 1.6;
+            margin-bottom: 0;
         }
         a {
             color: #3498db;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #1e87d0;
         }
     </style>
 </head>
