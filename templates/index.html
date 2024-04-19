@@ -1,22 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortener</title>
-    <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #283048, #859398);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        label {
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        input[type="text"], input[type="number"], input[type="submit"] {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            padding: 10px 15px;
+            width: 100%;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus, input[type="submit"]:focus {
+            background: rgba(255, 255, 255, 0.2);
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #4CAF50, #2196F3);
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(to right, #45a049, #1976D2);
+        }
+    </style>
 </head>
 <body>
-    <h1>URL Shortener</h1>
-    <form action="/shorten" method="post">
-        <label for="long_url">Enter URL:</label>
-        <input type="text" id="long_url" name="long_url" required>
-        <br>
-        <label for="expiration_days">Expiration Days (optional):</label>
-        <input type="number" id="expiration_days" name="expiration_days" min="0">
-        <br>
-        <input type="submit" value="Shorten">
-    </form>
-    <!-- Add Bootstrap JS -->
+    <div class="container">
+        <h1>URL Shortener</h1>
+        <form action="/shorten" method="post">
+            <label for="long_url">Enter URL:</label>
+            <input type="text" id="long_url" name="long_url" required>
+            <label for="expiration_days">Expiration Days (optional):</label>
+            <input type="number" id="expiration_days" name="expiration_days" min="0">
+            <input type="submit" value="Shorten">
+        </form>
+    </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
